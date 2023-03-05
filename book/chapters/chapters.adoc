@@ -1,0 +1,7 @@
+// Ruta Base para Imagenes
+
+:imagesdir: book/
+
+// Ruta Por Capítulo
+:imagesdir: book/chapters/01/images/
+include::01/chapter.adoc[]

@@ -1,0 +1,9 @@
+[glossary]
+== Glosario
+
+Lista de conceptos utilizados a lo largo de este documento.
+
+[glossary]
+
+class::
+  Significa _"clase"_.

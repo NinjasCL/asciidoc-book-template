@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc maxdepth="3"?>
+<?asciidoc-numbered?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="es">
+<info>
+<title>Libro de Ejemplo</title>
+<date>2023-03-05</date>
+<copyright>
+<holder>CC-BY-NC-SA 4.0</holder>
+</copyright>
+<author>
+<personname>
+<firstname>Camilo</firstname>
+<othername>A.</othername>
+<surname>Castro</surname>
+</personname>
+<email>https://github.com/clsource[@clsource]</email>
+</author>
+<authorinitials>CAC</authorinitials>
+<cover role="front">
+<mediaobject>
+<imageobject>
+<imagedata fileref="book/assets/asal-lotfi-8ePZbdxnpi0-unsplash.jpg" contentwidth="1050" contentdepth="1600"/>
+</imageobject>
+</mediaobject>
+</cover>
+</info>
+<colophon xml:id="_colofón">
+<title>Colofón</title>
+<simpara>Escrito por <link xl:href="https://ninjas.cl">Camilo Castro</link> y <link xl:href="https://github.com/ninjascl/asciidoc-book-template/graphs/contributors">colaboradores</link><footnote><simpara><link xl:href="https://github.com/ninjascl/asciidoc-book-template/graphs/contributors">https://github.com/ninjascl/asciidoc-book-template/graphs/contributors</link></simpara></footnote>. Para <link xl:href="https://ninjas.cl">Ninjas.cl</link><footnote><simpara><link xl:href="https://ninjas.cl">https://ninjas.cl</link></simpara></footnote>.</simpara>
+<simpara>Esta obra está bajo una <link xl:href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Atribución-No-Comercial-Compartir-Igual 4.0 Internacional</link><footnote><simpara><link xl:href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</link></simpara></footnote></simpara>
+<simpara><link xl:href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><inlinemediaobject>
+<imageobject>
+<imagedata fileref="book/assets/cc.png"/>
+</imageobject>
+<textobject><phrase>Licencia Creative Commons</phrase></textobject>
+</inlinemediaobject></link></simpara>
+<simpara>A menos que se especifique explícitamente, el código fuente esta bajo una licencia <link xl:href="https://opensource.org/licenses/BSD-2-Clause">BSD-2</link><footnote><simpara><link xl:href="https://opensource.org/licenses/BSD-2-Clause">https://opensource.org/licenses/BSD-2-Clause</link></simpara></footnote>.</simpara>
+</colophon>
+<preface xml:id="_sobre_el_autor" role="authors">
+<title>Sobre el Autor</title>
+
+</preface>
+<dedication xml:id="_dedicatoria">
+<title>Dedicatoria</title>
+
+</dedication>
+<preface xml:id="_prefacio">
+<title>Prefacio</title>
+
+</preface>
+<chapter xml:id="_introducción">
+<title>Introducción</title>
+
+</chapter>
+<chapter xml:id="_ejemplo_de_capítulo">
+<title>Ejemplo de Capítulo</title>
+<simpara>Ejemplo de Capítulo</simpara>
+<simpara><inlinemediaobject>
+<imageobject>
+<imagedata fileref="book/chapters/01/images/kimberly-farmer-lUaaKCUANVI-unsplash.jpg"/>
+</imageobject>
+<textobject><phrase>Foto de Kimberly Farmer en Unsplash</phrase></textobject>
+</inlinemediaobject></simpara>
+<formalpara>
+<title>Ejemplo de Código</title>
+<para>
+<programlisting language="ruby" linenumbering="numbered">require 'sinatra' <co xml:id="CO1-1"/>
+
+get '/hi' do <co xml:id="CO1-2"/> <co xml:id="CO1-3"/>
+  "Hello World!"
+end</programlisting>
+</para>
+</formalpara>
+<calloutlist>
+<callout arearefs="CO1-1">
+<para>Library import</para>
+</callout>
+<callout arearefs="CO1-2">
+<para>URL mapping</para>
+</callout>
+<callout arearefs="CO1-3">
+<para>Response block</para>
+</callout>
+</calloutlist>
+<programlisting language="erlang" linenumbering="numbered">-module(hello_world).
+-compile(export_all).
+
+hello() -&gt;
+    io:format("hello world~n"). <co xml:id="CO2-1"/></programlisting>
+<calloutlist>
+<callout arearefs="CO2-1">
+<para>A callout behind a custom line comment prefix.</para>
+</callout>
+</calloutlist>
+<note>
+<simpara>Ejemplo de Nota</simpara>
+</note>
+<warning>
+<simpara>Ejemplo de Advertencia</simpara>
+</warning>
+<important>
+<simpara>Ejemplo de Importante</simpara>
+</important>
+<caution>
+<simpara>Ejemplo de Cuidado</simpara>
+</caution>
+<tip>
+<simpara>Ejemplo de Consejo</simpara>
+</tip>
+<section xml:id="_primer_título">
+<title>Primer Título</title>
+<simpara>Referencia a <xref linkend="inventwithpython"/></simpara>
+<section xml:id="_segundo_título">
+<title>Segundo Título</title>
+<simpara>Esto tiene una nota al pie<footnote><simpara>Nota al Pie</simpara></footnote>.</simpara>
+<section xml:id="_tercer_título">
+<title>Tercer Título</title>
+<itemizedlist>
+<listitem>
+<simpara><inlinemediaobject>
+<imageobject>
+<imagedata fileref="./images/icons/comment.png"/>
+</imageobject>
+<textobject><phrase>comment</phrase></textobject>
+</inlinemediaobject> Icono Comentario</simpara>
+</listitem>
+<listitem>
+<simpara><inlinemediaobject>
+<imageobject>
+<imagedata fileref="./images/icons/file.png"/>
+</imageobject>
+<textobject><phrase>file</phrase></textobject>
+</inlinemediaobject> Icono Archivo</simpara>
+</listitem>
+</itemizedlist>
+</section>
+</section>
+</section>
+</chapter>
+<preface xml:id="_epílogo" role="afterword">
+<title>Epílogo</title>
+
+</preface>
+<appendix xml:id="_primer_anexo">
+<title>Primer Anexo</title>
+
+</appendix>
+<glossary xml:id="_glosario">
+<title>Glosario</title>
+<simpara>Lista de conceptos utilizados a lo largo de este documento.</simpara>
+<glossentry>
+<glossterm>class</glossterm>
+<glossdef>
+<simpara>Significa <emphasis>"clase"</emphasis>.</simpara>
+</glossdef>
+</glossentry>
+</glossary>
+<bibliography xml:id="_bibliografía">
+<title>Bibliografía</title>
+<simpara>Una lista de recursos complementarios y referenciales.</simpara>
+<bibliodiv>
+<title>Libros</title>
+<bibliomixed>
+<bibliomisc><anchor xml:id="inventwithpython" xreflabel="[inventwithpython]"/>[inventwithpython] Albert Sweigart. 'Inventa tus Propios Juegos de computadora con Python'. <link xl:href="http://inventwithpython.com/es">http://inventwithpython.com/es</link>. ISBN 978-1514370926</bibliomisc>
+</bibliomixed>
+</bibliodiv>
+<bibliodiv>
+<title>Sitios Web</title>
+<bibliomixed>
+<bibliomisc><anchor xml:id="googlepython" xreflabel="[googlepython]"/>[googlepython] Google. 'Python Class' <link xl:href="http://code.google.com/edu/languages/google-python-class/">http://code.google.com/edu/languages/google-python-class/</link></bibliomisc>
+</bibliomixed>
+</bibliodiv>
+</bibliography>
+<index xml:id="_índice">
+<title>Índice</title>
+
+</index>
+</book>

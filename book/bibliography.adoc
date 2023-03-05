@@ -1,0 +1,13 @@
+[bibliography]
+== Bibliografía
+
+Una lista de recursos complementarios y referenciales.
+
+[bibliography]
+.Libros
+
+- [[[inventwithpython]]] Albert Sweigart. 'Inventa tus Propios Juegos de computadora con Python'. http://inventwithpython.com/es. ISBN 978-1514370926
+
+.Sitios Web
+
+- [[[googlepython]]] Google. 'Python Class' http://code.google.com/edu/languages/google-python-class/

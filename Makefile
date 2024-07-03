@@ -1,34 +1,45 @@
-.PHONY: html docbook pdf epub build clean
+.PHONY: html docbook pdf epub word build clean update
 
 # TODO: Consider Docker https://github.com/asciidoctor/docker-asciidoctor
 
+build b:
+	@make clean
+	@make html
+	@make docbook
+	@make pdf
+	@make word
+	@make epub
+
 html h:
-	@mkdir -p docs/
 	@rm -rf docs/index.html
+	@mkdir -p docs/book/assets
 	@cp -R assets/highlight docs/
+	@cp -R book/assets docs/book
+
 	asciidoctor book.adoc -o docs/index.html
 
 docbook d:
 	@mkdir -p docs
 	@rm -rf docs/book.xml
-	asciidoctor -b docbook book.adoc -o docs/book.xml
+	asciidoctor -a media=prepress -b docbook book.adoc -o docs/book.xml
 
 pdf p:
 	@mkdir -p docs
 	@rm -rf docs/book.pdf
 	asciidoctor-pdf -a allow-uri-read=true -a source-highlighter=rouge -a rouge-style=monokai_sublime book.adoc -o docs/book.pdf
 
-# Epub is in beta. Maybe try using docbook for best resuts.
 epub e:
 	@mkdir -p docs
 	@rm -rf docs/book.epub
-	asciidoctor-epub3 -D docs/book.epub -a allow-uri-read -a ebook-validate -a source-highlighter=rouge -a rouge-style=monokai_sublime book.adoc
+	@cd docs && pandoc --from docbook --to epub --output book.epub book.xml
 
 clean c:
 	@rm -rf docs
 
-build b:
-	make clean
-	make html
-	make docbook
-	make pdf
+update u:
+	@./update.sh
+
+word w:
+	@mkdir -p docs
+	@rm -rf docs/book.docx
+	@cd docs && pandoc --from docbook --to docx --output book.docx book.xml

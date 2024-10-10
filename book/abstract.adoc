@@ -1,4 +1,6 @@
-[abstract]
+[preface]
+[role="abstract"]
+
 == Abstract
 
 An abstract is a crisp, short, powerful, and self-contained summary of a research manuscript used to help the reader swiftly determine the paper's purpose. Although the abstract is the first paragraph of the manuscript it should be written last when all the other sections have been addressed.

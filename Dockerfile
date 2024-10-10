@@ -16,7 +16,8 @@ RUN apk add --no-cache \
     libpng-dev \
     pango-dev \
     bash \
-    imagemagick
+    imagemagick \
+    ttf-dejavu
 
 # TODO: Consider installing bibtex for using: asciidoctor -r asciidoctor-bibtex
 

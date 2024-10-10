@@ -8,7 +8,15 @@ html h:
 
 pdf p:
 	@rm -rf docs/book.pdf
+	@rm -rf docs/.asciidoctor
 	@make docs
+# Copy files
+	@find book -name '*.jpg' | xargs -I {} cp {} docs/.asciidoctor
+	@find book -name '*.jpeg' | xargs -I {} cp {} docs/.asciidoctor
+	@find book -name '*.png' | xargs -I {} cp {} docs/.asciidoctor
+	@find book -name '*.svg' | xargs -I {} cp {} docs/.asciidoctor
+	@find book -name '*.gif' | xargs -I {} cp {} docs/.asciidoctor
+
 	@docker run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book asciidoctor-pdf -a allow-uri-read=true -a source-highlighter=rouge -a rouge-style=monokai_sublime -r asciidoctor-diagram -r asciidoctor-mathematical -a mathematical-format=svg book.adoc -o docs/book.pdf --verbose
 
 server s:
@@ -22,7 +30,7 @@ install i:
 	@docker build -t adoc-book .
 
 docs:
-	@mkdir -p docs
+	@mkdir -p docs/.asciidoctor
 
 docbook d:
 	@make docs

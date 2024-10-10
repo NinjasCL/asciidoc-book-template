@@ -11,14 +11,13 @@ Example Author <email@example.com>
 :lang: es
 :description: A book about something.
 :keywords: web, mobile, programación, lenguaje, referencia
-:imagesdir: book/
 :data-uri:
 :allow-uri-read:
-:front-cover-image: image:resources/images/cover-asal-lotfi-8ePZbdxnpi0-unsplash.jpg[fit=fill]
-:back-cover-image: image:resources/images/cover-asal-lotfi-8ePZbdxnpi0-unsplash.jpg[fit=fill]
+:imagesdir: book/
 :epub-chapter-level: 2
 :toc: left
 :toclevels: 3
+:toc: macro
 :ext-relative:
 :source-linenums-option:
 :source-highlighter: highlight.js
@@ -56,6 +55,13 @@ ifdef::env-github[]
 :tip-caption: :bulb:
 :warning-caption: :warning:
 endif::[]
+// PDF Only Configs
+ifdef::backend-pdf[]
+:front-cover-image: image:../../resources/images/cover-asal-lotfi-8ePZbdxnpi0-unsplash.jpg[fit=fill]
+// :back-cover-image: image:resources/images/cover-asal-lotfi-8ePZbdxnpi0-unsplash.jpg[fit=fill]
+:imagesdir: docs/.asciidoctor
+:imagesoutdir: docs/.asciidoctor
+endif::[]
 
 ////
 Organize your book chapter by chapter in chapters.adoc and appendices.adoc
@@ -72,6 +78,8 @@ include::book/preface.adoc[]
 
 include::book/abstract.adoc[]
 
+toc::[]
+
 include::book/chapters.adoc[]
 
 include::book/appendices.adoc[]
@@ -80,7 +88,7 @@ include::book/glossary.adoc[]
 
 include::book/bibliography.adoc[]
 
-ifndef::backend-html5[]
+ifdef::backend-pdf[]
 include::book/index.adoc[]
 endif::[]
 

@@ -1,7 +1,5 @@
-:imagesdir: book/
-
 // Image route per chapter
+ifndef::backend-pdf[]
 :imagesdir: book/chapters/_example/images/
-:imagesoutdir: book/chapters/_example/images/
-:imagesoutpath: images
+endif::[]
 include::chapters/_example/chapter.adoc[]

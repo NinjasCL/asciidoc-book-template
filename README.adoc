@@ -1,36 +1,60 @@
-:toc: macro
-:toc-title: Tabla de Contenidos
-:toclevels: 3
+:fn-ninjas: footnote:[https://ninjas.cl]
 
-# Libro de Ejemplo
+= Asciidoc Book Template
 
-Esta es una plantilla para escribir más libros.
-Viene con los comandos básicos en el _Makefile_.
+This is an example template for making _Asciidoc_ books.
 
-Escrito por https://ninjas.cl[Camilo Castro] y https://github.com/ninjascl/asciidoc-book-template/graphs/contributors[colaboradores]. Para https://ninjas.cl[Ninjas.cl].
+An example output can be seen online at https://ninjascl.github.io/asciidoc-book-template/.
 
-## https://ninjascl.github.io/asciidoc-book-template/[Leer Online]
+You can learn with https://github.com/powerman/asciidoc-cheatsheet[Asciidoc Cheatsheet].
 
-Este libro puede ser leido gratuitamente en https://ninjascl.github.io/asciidoc-book-template/.
+== Technology
 
-## Licencia
+- https://www.docker.com/
+- https://docs.asciidoctor.org/
+- Python3 (Webserver)
+- https://pandoc.org/ (Conversion to multiple formats)
 
-### Documento
+=== Diagrams
 
-Esta obra está bajo una http://creativecommons.org/licenses/by-nc-sa/4.0/[Licencia Creative Commons Atribución-No-Comercial-Compartir-Igual 4.0 Internacional]
+Using the base Dockerfile for https://docs.asciidoctor.org/diagram-extension/latest/
 
-http://creativecommons.org/licenses/by-nc-sa/4.0/[image:https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png[Licencia Creative Commons]]
+The following technologies were selected for diagrams:
 
-### Código Fuente
+- https://docs.asciidoctor.org/diagram-extension/latest/diagram_types/plantuml/[PlantUML]: UML diagrams and C4 architecture diagrams.
+- https://docs.asciidoctor.org/diagram-extension/latest/diagram_types/graphviz/[Graphviz]: Generic diagrams tool.
+- https://docs.asciidoctor.org/diagram-extension/latest/diagram_types/dbml/[DBML]: Database ERD diagrams (friendlier syntax than PlantUML)
+- https://docs.asciidoctor.org/diagram-extension/latest/diagram_types/vega/[Vega]: Declarative language for creating, saving, and sharing interactive visualization designs.
 
-A menos que se especifique explícitamente, el código fuente esta bajo una licencia https://opensource.org/licenses/BSD-2-Clause[BSD-2].
+.WIP Diagrams
+These need extra configurations inside the Dockerfile to Work (Puppeteer).
 
+- https://docs.asciidoctor.org/diagram-extension/latest/diagram_types/mermaid/[Mermaid]: Uses Markdown-inspired text definitions and a renderer to create and modify complex diagrams.
+- https://docs.asciidoctor.org/diagram-extension/latest/diagram_types/bpmn/[BMPN]: Business Process Model and Notation.
 
-## 🤩 Créditos
+== Commands
+
+- `make install`: Builds the Dockerfile.
+- `make html`: Builds the html version of the book.
+- `make pdf`: Builds a PDF version of the book.
+- `make server`: Starts a new server for the html version. (requires python3).
+- `make word`: Creates a new Microsoft Word document from the book. (requires pandoc).
+
+== License
+
+Created with ❤️ by https://ninjas.cl[Camilo Castro] and https://github.com/ninjascl/asciidoc-book-template/graphs/contributors[contributors]footnote:[https://github.com/ninjascl/asciidoc-book-template/graphs/contributors]. for https://ninjas.cl[Ninjas.cl]{fn-ninjas}.
+
+This document is licensed with http://creativecommons.org/licenses/by-nc-sa/4.0/[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International]footnote:[http://creativecommons.org/licenses/by-nc-sa/4.0/]
+
+http://creativecommons.org/licenses/by-nc-sa/4.0/[image:resources/images/by-nc-sa.svg[Licencia Creative Commons]]
+
+Source code licensed with https://opensource.org/licenses/BSD-2-Clause[BSD-2]footnote:[https://opensource.org/licenses/BSD-2-Clause].
+
+## 🤩 Credits
 
 ++++
 <p>
-  Hecho con <i class="fa fa-heart">&#9829;</i> por
+  Made with <i class="fa fa-heart">&#9829;</i> by
   <a href="https://ninjas.cl">
     Ninjas.cl
   </a>.

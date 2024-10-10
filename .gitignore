@@ -1,1 +1,6 @@
 .DS_Store
+.asciidoctor
+.vscode
+.idea
+node_modules/
+dbml-error.log

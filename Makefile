@@ -1,45 +1,35 @@
-.PHONY: html docbook pdf epub word build clean update
-
-# TODO: Consider Docker https://github.com/asciidoctor/docker-asciidoctor
-
-build b:
-	@make clean
-	@make html
-	@make docbook
-	@make pdf
-	@make word
-	@make epub
+.PHONY: html pdf server install bash word docbook docs
 
 html h:
-	@rm -rf docs/index.html
-	@mkdir -p docs/book/assets
-	@cp -R assets/highlight docs/
-	@cp -R book/assets docs/book
-
-	asciidoctor book.adoc -o docs/index.html
-
-docbook d:
-	@mkdir -p docs
-	@rm -rf docs/book.xml
-	asciidoctor -a media=prepress -b docbook book.adoc -o docs/book.xml
+	@rm -rf docs/html
+	@mkdir -p docs/html
+	@cp -r resources/ docs/html
+	@docker run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book asciidoctor -r asciidoctor-diagram book.adoc -o docs/html/index.html --verbose
 
 pdf p:
-	@mkdir -p docs
 	@rm -rf docs/book.pdf
-	asciidoctor-pdf -a allow-uri-read=true -a source-highlighter=rouge -a rouge-style=monokai_sublime book.adoc -o docs/book.pdf
+	@make docs
+	@docker run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book asciidoctor-pdf -a allow-uri-read=true -a source-highlighter=rouge -a rouge-style=monokai_sublime -r asciidoctor-diagram -r asciidoctor-mathematical -a mathematical-format=svg book.adoc -o docs/book.pdf --verbose
 
-epub e:
+server s:
+	@cd docs/html && echo "http://localhost:8000" && python3 -m http.server
+
+# Enter the server inside Docker
+bash:
+	@docker run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book /bin/bash
+
+install i:
+	@docker build -t adoc-book .
+
+docs:
 	@mkdir -p docs
-	@rm -rf docs/book.epub
-	@cd docs && pandoc --from docbook --to epub --output book.epub book.xml
 
-clean c:
-	@rm -rf docs
-
-update u:
-	@./update.sh
+docbook d:
+	@make docs
+	@rm -rf docs/book.xml
+	@docker run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book asciidoctor -b docbook -r asciidoctor-diagram -r asciidoctor-mathematical -a mathematical-format=svg -a media=prepress book.adoc -o docs/book.xml --verbose
 
 word w:
-	@mkdir -p docs
+	@make docs
 	@rm -rf docs/book.docx
 	@cd docs && pandoc --from docbook --to docx --output book.docx book.xml

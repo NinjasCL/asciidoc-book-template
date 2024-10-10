@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg height='608pt' preserveAspectRatio='xMidYMid meet' viewBox='0.00 0.00 1668.16 607.63' width='1668pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<g class='graph' id='graph0' transform='scale(1 1) rotate(0) translate(4 603.63)'>
+<title>dbml</title>
+
+<g class='node' id='follows'>
+<title>follows</title>
+<ellipse cx='1373.78' cy='-389.81' fill='none' rx='286.26' ry='172.57' stroke='black' stroke-width='0'/>
+<polygon fill='#1d71b8' points='1173.78,-449.81 1173.78,-509.81 1574.78,-509.81 1574.78,-449.81 1173.78,-449.81' stroke='transparent'/>
+<polygon fill='none' points='1173.78,-449.81 1173.78,-509.81 1574.78,-509.81 1574.78,-449.81 1173.78,-449.81' stroke='#29235c'/>
+<text fill='#ffffff' font-family='Helvetica,sans-Serif' font-size='32.00' font-weight='bold' text-anchor='start' x='1263.15' y='-471.01'> &#160;&#160;&#160;&#160;&#160;&#160;follows &#160;&#160;&#160;&#160;&#160;&#160;</text>
+<polygon fill='#e7e2dd' points='1173.78,-389.81 1173.78,-449.81 1574.78,-449.81 1574.78,-389.81 1173.78,-389.81' stroke='transparent'/>
+<polygon fill='none' points='1173.78,-389.81 1173.78,-449.81 1574.78,-449.81 1574.78,-389.81 1173.78,-389.81' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='1184.42' y='-410.01'>following_user_id &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='1466.38' y='-411.01'>integer</text>
+<polygon fill='#e7e2dd' points='1173.78,-329.81 1173.78,-389.81 1574.78,-389.81 1574.78,-329.81 1173.78,-329.81' stroke='transparent'/>
+<polygon fill='none' points='1173.78,-329.81 1173.78,-389.81 1574.78,-389.81 1574.78,-329.81 1173.78,-329.81' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='1184.78' y='-350.01'>followed_user_id &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='1465.98' y='-351.01'>integer</text>
+<polygon fill='#e7e2dd' points='1173.78,-269.81 1173.78,-329.81 1574.78,-329.81 1574.78,-269.81 1173.78,-269.81' stroke='transparent'/>
+<polygon fill='none' points='1173.78,-269.81 1173.78,-329.81 1574.78,-329.81 1574.78,-269.81 1173.78,-269.81' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='1184.78' y='-290.01'>created_at &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='1416.23' y='-291.01'>timestamp</text>
+<polygon fill='none' points='1172.28,-268.81 1172.28,-510.81 1575.28,-510.81 1575.28,-268.81 1172.28,-268.81' stroke='#29235c' stroke-width='2'/>
+</g>
+
+<g class='node' id='users'>
+<title>users</title>
+<ellipse cx='797.55' cy='-359.81' fill='none' rx='253.7' ry='214.92' stroke='black' stroke-width='0'/>
+<polygon fill='#1d71b8' points='620.55,-449.81 620.55,-509.81 975.55,-509.81 975.55,-449.81 620.55,-449.81' stroke='transparent'/>
+<polygon fill='none' points='620.55,-449.81 620.55,-509.81 975.55,-509.81 975.55,-449.81 620.55,-449.81' stroke='#29235c'/>
+<text fill='#ffffff' font-family='Helvetica,sans-Serif' font-size='32.00' font-weight='bold' text-anchor='start' x='696.69' y='-471.01'> &#160;&#160;&#160;&#160;&#160;&#160;users &#160;&#160;&#160;&#160;&#160;&#160;</text>
+<polygon fill='#e7e2dd' points='620.55,-389.81 620.55,-449.81 975.55,-449.81 975.55,-389.81 620.55,-389.81' stroke='transparent'/>
+<polygon fill='none' points='620.55,-389.81 620.55,-449.81 975.55,-449.81 975.55,-389.81 620.55,-389.81' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-weight='bold' text-anchor='start' x='631.55' y='-411.01'>id</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='656.44' y='-411.01'> &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='866.75' y='-411.01'>integer</text>
+<polygon fill='#e7e2dd' points='620.55,-329.81 620.55,-389.81 975.55,-389.81 975.55,-329.81 620.55,-329.81' stroke='transparent'/>
+<polygon fill='none' points='620.55,-329.81 620.55,-389.81 975.55,-389.81 975.55,-329.81 620.55,-329.81' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='631.55' y='-350.01'>username &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='857.88' y='-351.01'>varchar</text>
+<polygon fill='#e7e2dd' points='620.55,-269.81 620.55,-329.81 975.55,-329.81 975.55,-269.81 620.55,-269.81' stroke='transparent'/>
+<polygon fill='none' points='620.55,-269.81 620.55,-329.81 975.55,-329.81 975.55,-269.81 620.55,-269.81' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='631.55' y='-290.01'>role &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='857.88' y='-291.01'>varchar</text>
+<polygon fill='#e7e2dd' points='620.55,-209.81 620.55,-269.81 975.55,-269.81 975.55,-209.81 620.55,-209.81' stroke='transparent'/>
+<polygon fill='none' points='620.55,-209.81 620.55,-269.81 975.55,-269.81 975.55,-209.81 620.55,-209.81' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='631.18' y='-230.01'>created_at &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='817.27' y='-231.01'>timestamp</text>
+<polygon fill='none' points='619.05,-208.81 619.05,-510.81 976.05,-510.81 976.05,-208.81 619.05,-208.81' stroke='#29235c' stroke-width='2'/>
+</g>
+
+
+<g class='edge' id='edge4'>
+<title>users:e&#45;&gt;follows:w</title>
+<path d='M976.55,-419.81C1060.19,-419.81 1083.67,-419.81 1162.37,-419.81' fill='none' stroke='#29235c' stroke-width='3'/>
+<polygon fill='#29235c' points='1162.78,-423.31 1172.78,-419.81 1162.78,-416.31 1162.78,-423.31' stroke='#29235c' stroke-width='3'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='middle' x='1166.56' y='-429.41'>*</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='middle' x='967.66' y='-429.41'>1</text>
+</g>
+
+
+<g class='edge' id='edge6'>
+<title>users:e&#45;&gt;follows:w</title>
+<path d='M976.55,-419.81C1064.28,-419.81 1080.42,-364.3 1162.69,-360.07' fill='none' stroke='#29235c' stroke-width='3'/>
+<polygon fill='#29235c' points='1162.88,-363.56 1172.78,-359.81 1162.7,-356.57 1162.88,-363.56' stroke='#29235c' stroke-width='3'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='middle' x='1166.56' y='-331.01'>*</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='middle' x='985.45' y='-429.41'>1</text>
+</g>
+
+<g class='node' id='posts'>
+<title>posts</title>
+<ellipse cx='253.85' cy='-299.81' fill='none' rx='253.7' ry='299.63' stroke='black' stroke-width='0'/>
+<polygon fill='#1d71b8' points='76.85,-449.81 76.85,-509.81 431.85,-509.81 431.85,-449.81 76.85,-449.81' stroke='transparent'/>
+<polygon fill='none' points='76.85,-449.81 76.85,-509.81 431.85,-509.81 431.85,-449.81 76.85,-449.81' stroke='#29235c'/>
+<text fill='#ffffff' font-family='Helvetica,sans-Serif' font-size='32.00' font-weight='bold' text-anchor='start' x='153.87' y='-471.01'> &#160;&#160;&#160;&#160;&#160;&#160;posts &#160;&#160;&#160;&#160;&#160;&#160;</text>
+<polygon fill='#e7e2dd' points='76.85,-389.81 76.85,-449.81 431.85,-449.81 431.85,-389.81 76.85,-389.81' stroke='transparent'/>
+<polygon fill='none' points='76.85,-389.81 76.85,-449.81 431.85,-449.81 431.85,-389.81 76.85,-389.81' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-weight='bold' text-anchor='start' x='87.85' y='-411.01'>id</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='112.74' y='-411.01'> &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='323.05' y='-411.01'>integer</text>
+<polygon fill='#e7e2dd' points='76.85,-329.81 76.85,-389.81 431.85,-389.81 431.85,-329.81 76.85,-329.81' stroke='transparent'/>
+<polygon fill='none' points='76.85,-329.81 76.85,-389.81 431.85,-389.81 431.85,-329.81 76.85,-329.81' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='87.85' y='-350.01'>title &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='314.18' y='-351.01'>varchar</text>
+<polygon fill='#e7e2dd' points='76.85,-269.81 76.85,-329.81 431.85,-329.81 431.85,-269.81 76.85,-269.81' stroke='transparent'/>
+<polygon fill='none' points='76.85,-269.81 76.85,-329.81 431.85,-329.81 431.85,-269.81 76.85,-269.81' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='87.85' y='-290.01'>body &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='369.28' y='-291.01'>text</text>
+<polygon fill='#e7e2dd' points='76.85,-209.81 76.85,-269.81 431.85,-269.81 431.85,-209.81 76.85,-209.81' stroke='transparent'/>
+<polygon fill='none' points='76.85,-209.81 76.85,-269.81 431.85,-269.81 431.85,-209.81 76.85,-209.81' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='87.85' y='-230.01'>user_id &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='323.05' y='-231.01'>integer</text>
+<polygon fill='#e7e2dd' points='76.85,-149.81 76.85,-209.81 431.85,-209.81 431.85,-149.81 76.85,-149.81' stroke='transparent'/>
+<polygon fill='none' points='76.85,-149.81 76.85,-209.81 431.85,-209.81 431.85,-149.81 76.85,-149.81' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='87.85' y='-170.01'>status &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='314.18' y='-171.01'>varchar</text>
+<polygon fill='#e7e2dd' points='76.85,-89.81 76.85,-149.81 431.85,-149.81 431.85,-89.81 76.85,-89.81' stroke='transparent'/>
+<polygon fill='none' points='76.85,-89.81 76.85,-149.81 431.85,-149.81 431.85,-89.81 76.85,-89.81' stroke='#29235c'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='start' x='87.48' y='-110.01'>created_at &#160;&#160;&#160;</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' font-style='italic' text-anchor='start' x='273.57' y='-111.01'>timestamp</text>
+<polygon fill='none' points='75.35,-88.81 75.35,-510.81 432.35,-510.81 432.35,-88.81 75.35,-88.81' stroke='#29235c' stroke-width='2'/>
+</g>
+
+
+<g class='edge' id='edge2'>
+<title>posts:e&#45;&gt;users:w</title>
+<path d='M432.85,-239.81C544.62,-239.81 506.8,-409.08 609.51,-419.33' fill='none' stroke='#29235c' stroke-width='3'/>
+<polygon fill='#29235c' points='609.4,-422.83 619.55,-419.81 609.73,-415.83 609.4,-422.83' stroke='#29235c' stroke-width='3'/>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='middle' x='610.66' y='-429.41'>1</text>
+<text fill='#29235c' font-family='Helvetica,sans-Serif' font-size='32.00' text-anchor='middle' x='426.63' y='-211.01'>*</text>
+</g>
+</g>
+</svg>

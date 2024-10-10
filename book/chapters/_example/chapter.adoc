@@ -1,0 +1,219 @@
+// Check more syntax at https://github.com/powerman/asciidoc-cheatsheet
+// Set imagesdir property here if needed (to preview a single chapter)
+//:imagesdir: images/
+
+== Example Chapter
+
+Example Chapter
+
+image:kimberly-farmer-lUaaKCUANVI-unsplash.jpg[By Kimberly Farmer in Unsplash]
+
+.Example Code
+[source,ruby]
+----
+require 'sinatra' <1>
+
+get '/hi' do <2> <3>
+  "Hello World!"
+end
+----
+<1> Library import
+<2> URL mapping
+<3> Response block
+
+[source,erlang,line-comment=%]
+----
+-module(hello_world).
+-compile(export_all).
+
+hello() ->
+    io:format("hello world~n"). % <1>
+----
+<1> A callout behind a custom line comment prefix.
+
+[NOTE]
+====
+Example Note
+====
+
+[WARNING]
+====
+Example Warning
+====
+
+[IMPORTANT]
+====
+Example Important
+====
+
+[CAUTION]
+====
+Example Caution
+====
+
+[TIP]
+====
+Example Tip
+====
+
+=== Title H1
+
+Referencia a <<inventwithpython>>
+
+==== SubTitle H2
+
+Footnote{empty}footnote:[Footnote].
+
+===== H3
+
+- icon:comment[] Comment Icon
+- icon:file[] File Icon
+
+stem:[sqrt(4) = 2]
+
+Water (stem:[H_2O]) is a critical component.
+
+[stem]
+++++
+sqrt(4) = 2
+++++
+
+.DBML
+[dbml]
+----
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table follows {
+  following_user_id integer
+  followed_user_id integer
+  created_at timestamp 
+}
+
+Table users {
+  id integer [primary key]
+  username varchar
+  role varchar
+  created_at timestamp
+}
+
+Table posts {
+  id integer [primary key]
+  title varchar
+  body text [note: 'Content of the post']
+  user_id integer
+  status varchar
+  created_at timestamp
+}
+
+Ref: posts.user_id > users.id // many-to-one
+
+Ref: users.id < follows.following_user_id
+
+Ref: users.id < follows.followed_user_id
+----
+
+.Vega-Lite
+[vega]
+----
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Google's stock price over time.",
+  "data": {"url": "https://vega.github.io/editor/data/stocks.csv"},
+  "transform": [{"filter": "datum.symbol==='GOOG'"}],
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "date", "type": "temporal"},
+    "y": {"field": "price", "type": "quantitative"}
+  }
+}
+
+----
+
+.PlantUML
+[plantuml]
+----
+@startuml
+skinparam monochrome true
+participant Participant as Foo
+actor       Actor       as Foo1
+boundary    Boundary    as Foo2
+control     Control     as Foo3
+entity      Entity      as Foo4
+database    Database    as Foo5
+collections Collections as Foo6
+queue       Queue       as Foo7
+Foo -> Foo1 : To actor 
+Foo -> Foo2 : To boundary
+Foo -> Foo3 : To control
+Foo -> Foo4 : To entity
+Foo -> Foo5 : To database
+Foo -> Foo6 : To collections
+Foo -> Foo7: To queue
+@enduml
+----
+
+.C4
+
+Check https://github.com/plantuml-stdlib/C4-PlantUML
+
+[plantuml]
+----
+@startuml C4_Elements
+!include  https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+Person(personAlias, "Label", "Optional Description")
+Container(containerAlias, "Label", "Technology", "Optional Description")
+System(systemAlias, "Label", "Optional Description")
+
+Rel(personAlias, containerAlias, "Label", "Optional Technology")
+@enduml
+----
+
+[plantuml]
+----
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+!include DEVICONS/angular.puml
+!include DEVICONS/java.puml
+!include DEVICONS/msql_server.puml
+!include FONTAWESOME/users.puml
+
+Person(user, "Customer", "People that need products", $sprite="users")
+Container(spa, "SPA", "angular", "The main interface that the customer interacts with", $sprite="angular")
+Container(api, "API", "java", "Handles all business logic", $sprite="java")
+ContainerDb(db, "Database", "Microsoft SQL", "Holds product, order and invoice information", $sprite="msql_server")
+
+Rel(user, spa, "Uses")
+Rel(spa, api, "Uses")
+Rel_R(api, db, "Reads/Writes")
+
+SHOW_FLOATING_LEGEND()
+Lay_Distance(LEGEND(), db, 1)
+@enduml
+----
+
+// Need special config in Dockerfile
+// .Mermaid
+// [mermaid]
+// ----
+// gitGraph
+//     commit
+//     commit
+//     branch develop
+//     checkout develop
+//     commit
+//     commit
+//     checkout main
+//     merge develop
+//     commit
+//     commit
+// ----
+
+// .BPMN
+// [bpmn]
+// ----
+// include::resources/pizza.bpmn[]
+// ----

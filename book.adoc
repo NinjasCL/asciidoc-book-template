@@ -1,5 +1,5 @@
-= Libro de Ejemplo
-Camilo A. Castro <https://github.com/clsource[@clsource]>
+= Example Book
+Example Author <email@example.com>
 :doctype: book
 :encoding: utf-8
 :numbered:
@@ -9,10 +9,13 @@ Camilo A. Castro <https://github.com/clsource[@clsource]>
 :producer: Ninjas.cl
 :copyright: CC-BY-NC-SA 4.0
 :lang: es
-:description: Un libro sobre algo.
+:description: A book about something.
 :keywords: web, mobile, programación, lenguaje, referencia
 :imagesdir: book/
-:front-cover-image: image:assets/asal-lotfi-8ePZbdxnpi0-unsplash.jpg[Front Cover,1050,1600]
+:data-uri:
+:allow-uri-read:
+:front-cover-image: image:resources/images/cover-asal-lotfi-8ePZbdxnpi0-unsplash.jpg[fit=fill]
+:back-cover-image: image:resources/images/cover-asal-lotfi-8ePZbdxnpi0-unsplash.jpg[fit=fill]
 :epub-chapter-level: 2
 :toc: left
 :toclevels: 3
@@ -23,23 +26,26 @@ Camilo A. Castro <https://github.com/clsource[@clsource]>
 :highlightjs-theme: srcery
 :highlightjsdir: highlight
 :stem: latexmath
-:appendix-caption: Anexo
-:appendix-refsig: {appendix-caption}
-:example-caption: Ejemplo
-:figure-caption: Figura
-:caution-caption: Precaución
-:important-caption: Importante
-:tip-caption: Sugerencia
-:note-caption: Nota
-:warning-caption: Aviso
-:chapter-label: Capítulo
-:last-update-label: Última actualización
-ifdef::listing-caption[:listing-caption: Lista]
-ifdef::preface-title[:preface-title: Prefacio]
-:table-caption: Tabla
-:toc-title: Tabla de Contenido
-:untitled-label: Sin título
-:version-label: Versión
+:stylesheet: resources/style.css
+// Optional Translations
+// :appendix-caption: Anexo
+// :appendix-refsig: {appendix-caption}
+// :example-caption: Ejemplo
+// :figure-caption: Figura
+// :caution-caption: Precaución
+// :important-caption: Importante
+// :tip-caption: Sugerencia
+// :note-caption: Nota
+// :warning-caption: Aviso
+// :chapter-label: Capítulo
+// :last-update-label: Última actualización
+// ifdef::listing-caption[:listing-caption: Lista]
+// ifdef::preface-title[:preface-title: Prefacio]
+// :table-caption: Tabla
+// :toc-title: Tabla de Contenido
+// :untitled-label: Sin título
+// :version-label: Versión
+// Github Icons
 ifndef::env-github[:icons: font]
 ifdef::env-github[]
 :outfilesuffix: .adoc
@@ -51,11 +57,10 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-
 ////
-Organize your book chapter by chapter
+Organize your book chapter by chapter in chapters.adoc and appendices.adoc
 ////
-include::book/colophon.adoc[]
+include::book/copyrights.adoc[]
 
 include::book/authors.adoc[]
 
@@ -63,16 +68,22 @@ include::book/dedication.adoc[]
 
 include::book/foreword.adoc[]
 
+include::book/preface.adoc[]
+
 include::book/abstract.adoc[]
 
-include::book/chapters/chapters.adoc[]
+include::book/chapters.adoc[]
 
-include::book/afterword.adoc[]
-
-include::book/appendixes/appendixes.adoc[]
+include::book/appendices.adoc[]
 
 include::book/glossary.adoc[]
 
 include::book/bibliography.adoc[]
 
+ifndef::backend-html5[]
 include::book/index.adoc[]
+endif::[]
+
+include::book/afterword.adoc[]
+
+include::book/colophon.adoc[]

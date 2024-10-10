@@ -1,4 +1,6 @@
 [preface]
 [role="authors"]
 
-== Sobre el Autor
+== Authors
+
+A little about page for the authors of the book.

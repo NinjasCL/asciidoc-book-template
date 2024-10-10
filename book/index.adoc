@@ -1,6 +1,9 @@
 [index]
-== Índice
+== Index
 ////////////////////////////////////////////////////////////////
 The index is normally left completely empty, it's contents being
 generated automatically by the DocBook toolchain.
+The built-in HTML5 converter in Asciidoctor does not generate an index. 
+Both Asciidoctor PDF and the DocBook toolchain will automatically populate an index into this seed section.
+See https://docs.asciidoctor.org/pdf-converter/latest/index-catalog/
 ////////////////////////////////////////////////////////////////  

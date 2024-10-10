@@ -1,4 +1,6 @@
 [preface]
 [role="afterword"]
 
-== Epílogo
+== Afterword
+
+An afterword is a literary device that is often found at the end of a piece of literature. It generally covers the story of how the book came into being, or of how the idea for the book was developed. 

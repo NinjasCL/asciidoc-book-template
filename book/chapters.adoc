@@ -1,0 +1,7 @@
+:imagesdir: book/
+
+// Image route per chapter
+:imagesdir: book/chapters/_example/images/
+:imagesoutdir: book/chapters/_example/images/
+:imagesoutpath: images
+include::chapters/_example/chapter.adoc[]

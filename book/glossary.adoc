@@ -1,9 +1,9 @@
 [glossary]
-== Glosario
+== Glossary
 
-Lista de conceptos utilizados a lo largo de este documento.
+A glossary, also known as a vocabulary or clavis, is an alphabetical list of terms in a particular domain of knowledge with the definitions for those terms. Traditionally, a glossary appears at the end of a book and includes terms within that book that are either newly introduced, uncommon, or specialized.
 
 [glossary]
 
 class::
-  Significa _"clase"_.
+  In object-oriented programming, a class is a template definition of the methods and variables in a particular kind of object.

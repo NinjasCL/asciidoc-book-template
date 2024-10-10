@@ -1,13 +1,34 @@
 [bibliography]
-== Bibliografía
+== References
 
-Una lista de recursos complementarios y referenciales.
+A bibliography is a list of works on a subject or by an author that were used or consulted to write a research paper, book or article. It can also be referred to as a list of works cited. It is usually found at the end of a book, article or research paper.
+
+It is recommended to follow *APA 7th Edition*.
+
+- https://apastyle.apa.org/style-grammar-guidelines/references/examples
+- https://libguides.jcu.edu.au/apa/reference-list
+
+Remember, you have to cite every piece of information that came from another source, whether or not it is in your own words. Everything cited in the text must appear in the reference list (except personal communication), and everything in your reference list must be something you have referred to in text. Make sure you don't have anything in one place that isn't in the other.
+
+For APA the reference list is arranged in alphabetical order of authors' surnames. Arrange by first author's name, then by second author if you have the same first author, etc.
+
+If a reference has no author, list it alphabetically according to the title. Ignore the words 'A', 'An' and 'The' at the beginning of a corporate author or title for deciding where it fits alphabetically.
+
+If there are two references by the same author, list them in order of publication date with the older one first.
+
+For example:
+
+- Bloggs, J. S. (n.d.)...
+- Bloggs, J. S. (2016)...
+- Bloggs, J. S. (2018a)....
+- Bloggs, J. S. (2018b, September)...
+- Bloggs, J. S. (in press)...
 
 [bibliography]
-.Libros
+.Books
 
 - [[[inventwithpython]]] Albert Sweigart. 'Inventa tus Propios Juegos de computadora con Python'. http://inventwithpython.com/es. ISBN 978-1514370926
 
-.Sitios Web
+.Websites
 
 - [[[googlepython]]] Google. 'Python Class' http://code.google.com/edu/languages/google-python-class/

@@ -1,8 +1,9 @@
 = Example Book
 Example Author <email@example.com>
+v1.0, 2024-10-25
 :doctype: book
 :encoding: utf-8
-:numbered:
+:sectnums:
 :icons: font
 :username: clsource
 :source: https://github.com/NinjasCL/asciidoc-book-template
@@ -36,6 +37,9 @@ Example Author <email@example.com>
 // :note-caption: Nota
 // :warning-caption: Aviso
 // :chapter-label: Capítulo
+// :chapter-label: Capítulo
+// :chapter-caption: Capítulo
+// :chapter-signifier: Capítulo
 // :last-update-label: Última actualización
 // ifdef::listing-caption[:listing-caption: Lista]
 // ifdef::preface-title[:preface-title: Prefacio]

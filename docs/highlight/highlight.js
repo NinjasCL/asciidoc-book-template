@@ -26576,7 +26576,7 @@ if (typeof exports === 'object' && typeof module !== 'undefined') { module.expor
     const PARAMS = {
       className: 'params',
       // convert this to negative lookbehind in v12
-      begin: /(\s*)\(/, // to match the parms with 
+      begin: /(\s*)\(/, // to match the parms with
       end: /\)/,
       excludeBegin: true,
       excludeEnd: true,
@@ -29380,7 +29380,7 @@ if (typeof exports === 'object' && typeof module !== 'undefined') { module.expor
         MIXIN_GUARD_MODE,
         IDENT_MODE('keyword', 'all\\b'),
         IDENT_MODE('variable', '@\\{' + IDENT_RE + '\\}'), // otherwise it’s identified as tag
-        
+
         {
           begin: '\\b(' + TAGS.join('|') + ')\\b',
           className: 'selector-tag'
@@ -46174,7 +46174,7 @@ if (typeof exports === 'object' && typeof module !== 'undefined') { module.expor
           scope: 'operator',
           match: /\s+(\|\||\+[\+\.]?|\*[\*\/\.]?|\/[\.]?|\.\.\.|\|>|&&|===?)\s+/,
           relevance: 0
-        },      
+        },
         hljs.inherit(hljs.APOS_STRING_MODE, {
           scope: 'string',
           relevance: 0
@@ -48195,10 +48195,10 @@ if (typeof exports === 'object' && typeof module !== 'undefined') { module.expor
           excludeBegin: true,
           excludeEnd: true,
           relevance: 0,
-          contains: [ 
-            TYPE, 
-            hljs.C_LINE_COMMENT_MODE, 
-            hljs.C_BLOCK_COMMENT_MODE, 
+          contains: [
+            TYPE,
+            hljs.C_LINE_COMMENT_MODE,
+            hljs.C_BLOCK_COMMENT_MODE,
           ]
         },
         {
@@ -48208,10 +48208,10 @@ if (typeof exports === 'object' && typeof module !== 'undefined') { module.expor
           excludeBegin: true,
           excludeEnd: true,
           relevance: 0,
-          contains: [ 
-            TYPE, 
-            hljs.C_LINE_COMMENT_MODE, 
-            hljs.C_BLOCK_COMMENT_MODE, 
+          contains: [
+            TYPE,
+            hljs.C_LINE_COMMENT_MODE,
+            hljs.C_BLOCK_COMMENT_MODE,
           ]
         },
         NAME
@@ -49820,11 +49820,11 @@ if (typeof exports === 'object' && typeof module !== 'undefined') { module.expor
   /*
   ////////////////////////////////////////////////////////////////////////////////////////////
     * Author: Leopard20
-    
+
     * Description:
     This script can be used to dump all commands to the clipboard.
     Make sure you're using the Diag EXE to dump all of the commands.
-    
+
     * How to use:
     Simply replace the _KEYWORDS and _LITERAL arrays with the one from this sqf.js file.
     Execute the script from the debug console.
@@ -52411,7 +52411,7 @@ if (typeof exports === 'object' && typeof module !== 'undefined') { module.expor
       'worldToModelVisual',
       'worldToScreen'
     ];
-    
+
     // list of keywords from:
     // https://community.bistudio.com/wiki/PreProcessor_Commands
     const PREPROCESSOR = {
@@ -52434,7 +52434,7 @@ if (typeof exports === 'object' && typeof module !== 'undefined') { module.expor
         hljs.C_BLOCK_COMMENT_MODE
       ]
     };
-    
+
     return {
       name: 'SQF',
       case_insensitive: true,
@@ -52454,7 +52454,7 @@ if (typeof exports === 'object' && typeof module !== 'undefined') { module.expor
       ],
       illegal: [
         //$ is only valid when used with Hex numbers (e.g. $FF)
-        /\$[^a-fA-F0-9]/, 
+        /\$[^a-fA-F0-9]/,
         /\w\$/,
         /\?/,      //There's no ? in SQF
         /@/,       //There's no @ in SQF
@@ -57039,7 +57039,7 @@ if (typeof exports === 'object' && typeof module !== 'undefined') { module.expor
     const PARAMS = {
       className: 'params',
       // convert this to negative lookbehind in v12
-      begin: /(\s*)\(/, // to match the parms with 
+      begin: /(\s*)\(/, // to match the parms with
       end: /\)/,
       excludeBegin: true,
       excludeEnd: true,
@@ -60421,7 +60421,7 @@ if (typeof exports === 'object' && typeof module !== 'undefined') { module.expor
     const KEY = {
       className: 'attr',
       variants: [
-        // added brackets support 
+        // added brackets support
         { begin: /\w[\w :()\./-]*:(?=[ \t]|$)/ },
         { // double quoted keys - with brackets
           begin: /"\w[\w :()\./-]*":(?=[ \t]|$)/ },
@@ -60737,3 +60737,32 @@ if (typeof exports === 'object' && typeof module !== 'undefined') { module.expor
 
     hljs.registerLanguage('zephir', hljsGrammar);
   })();
+
+  /*! `odin` grammar compiled for Highlight.js. From: https://github.com/odin-lang/odin-lang.org/blob/9e62d94a6392f68ad01ac0059ced020a4eaacf86/themes/odin/layouts/partials/head.html#L71 */
+  hljs.registerLanguage("odin", function(e) {
+    return {
+        aliases: ["odin", "odinlang", "odin-lang", "language-odin"],
+        keywords: {
+            keyword: "auto_cast bit_field bit_set break case cast context continue defer distinct do dynamic else enum fallthrough for foreign if import in map matrix not_in or_else or_return package proc return struct switch transmute type_of typeid union using when where",
+            literal: "true false nil",
+            built_in: "abs align_of cap clamp complex conj expand_to_tuple imag jmag kmag len max min offset_of quaternion real size_of soa_unzip soa_zip swizzle type_info_of type_of typeid_of"
+        },
+        illegal: "</",
+        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, {
+            className: "string",
+            variants: [e.QUOTE_STRING_MODE, {
+                begin: "'",
+                end: "[^\\\\]'"
+            }, {
+                begin: "`",
+                end: "`"
+            }]
+        }, {
+            className: "number",
+            variants: [{
+                begin: e.C_NUMBER_RE + "[ijk]",
+                relevance: 1
+            }, e.C_NUMBER_MODE]
+        }]
+    }
+});

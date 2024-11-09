@@ -20,7 +20,7 @@ Example Author <email@example.com>
 :ext-relative:
 :source-linenums-option:
 :source-highlighter: highlight.js
-:highlightjs-languages: css, javascript, markdown, ruby, wren, elixir, erlang, swift, rust, python, yaml
+:highlightjs-languages: css, javascript, markdown, ruby, wren, elixir, erlang, swift, rust, python, yaml, odin
 :highlightjs-theme: srcery
 :highlightjsdir: highlight
 :stem: latexmath

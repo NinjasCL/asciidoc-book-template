@@ -17,6 +17,12 @@ pdf p:
 	@find book -name '*.svg' | xargs -I {} cp {} docs/.asciidoctor
 	@find book -name '*.gif' | xargs -I {} cp {} docs/.asciidoctor
 
+  @find resources/images -name '*.jpg' | xargs -I {} cp {} docs/.asciidoctor
+	@find resources/images -name '*.jpeg' | xargs -I {} cp {} docs/.asciidoctor
+	@find resources/images -name '*.png' | xargs -I {} cp {} docs/.asciidoctor
+	@find resources/images -name '*.svg' | xargs -I {} cp {} docs/.asciidoctor
+	@find resources/images -name '*.gif' | xargs -I {} cp {} docs/.asciidoctor
+
 	@docker run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book asciidoctor-pdf -a allow-uri-read=true -a source-highlighter=rouge -a rouge-style=monokai_sublime -r asciidoctor-diagram -r asciidoctor-mathematical -a mathematical-format=svg book.adoc -o docs/book.pdf --verbose
 
 server s:

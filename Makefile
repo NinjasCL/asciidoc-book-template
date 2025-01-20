@@ -52,4 +52,4 @@ docbook d:
 word w:
 	@rm -rf docs/book.docx
 	@make docbook
-	@cd docs && pandoc --from docbook --to docx --output book.docx book.xml
+	@docker run -it -u $(id -u):$(id -g) -v ./docs:/pandoc dalibo/pandocker --from docbook --to docx --output book.docx book.xml

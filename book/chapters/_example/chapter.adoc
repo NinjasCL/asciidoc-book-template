@@ -58,7 +58,7 @@ Example Tip
 
 === Title H1
 
-Referencia a <<inventwithpython>>
+Referencia a cite:[inventwithpython]
 
 ==== SubTitle H2
 

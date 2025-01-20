@@ -26,6 +26,13 @@ v1.0, 2024-10-25
 :highlightjsdir: highlight
 :stem: latexmath
 :stylesheet: resources/style.css
+// Bibliography
+// https://latex-tutorial.com/tutorials/bibtex/#Formats
+:bibtex-file: book/bibliography.bib
+:bibtex-style: apa-6th-edition
+:bibtex-order: alphabetical
+:bibtex-throw: true
+:bibtex-locale: es-ES
 // Optional Translations
 // :appendix-caption: Anexo
 // :appendix-refsig: {appendix-caption}

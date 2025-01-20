@@ -3,7 +3,7 @@
 
 A bibliography is a list of works on a subject or by an author that were used or consulted to write a research paper, book or article. It can also be referred to as a list of works cited. It is usually found at the end of a book, article or research paper.
 
-It is recommended to follow *APA 7th Edition*.
+It is recommended to follow *APA 6th or 7th Edition*.
 
 - https://apastyle.apa.org/style-grammar-guidelines/references/examples
 - https://libguides.jcu.edu.au/apa/reference-list
@@ -24,11 +24,4 @@ For example:
 - Bloggs, J. S. (2018b, September)...
 - Bloggs, J. S. (in press)...
 
-[bibliography]
-.Books
-
-- [[[inventwithpython]]] Albert Sweigart. 'Inventa tus Propios Juegos de computadora con Python'. http://inventwithpython.com/es. ISBN 978-1514370926
-
-.Websites
-
-- [[[googlepython]]] Google. 'Python Class' http://code.google.com/edu/languages/google-python-class/
+bibliography::[]

@@ -1,0 +1,4 @@
+[preface]
+== List of Figures
+
+list-of::image[]

@@ -1,0 +1,4 @@
+[preface]
+== List of Tables
+
+list-of::table[]

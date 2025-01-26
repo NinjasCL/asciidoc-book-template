@@ -4,9 +4,10 @@
 
 == Example Chapter
 
-Example Chapter
+An example
 
-image:kimberly-farmer-lUaaKCUANVI-unsplash.jpg[By Kimberly Farmer in Unsplash]
+.Example Chapter
+image::kimberly-farmer-lUaaKCUANVI-unsplash.jpg[By Kimberly Farmer in Unsplash]
 
 .Example Code
 [source,ruby]
@@ -194,6 +195,14 @@ SHOW_FLOATING_LEGEND()
 Lay_Distance(LEGEND(), db, 1)
 @enduml
 ----
+
+.Example Table
+|====
+|Table
+
+|Example
+|====
+
 
 // Need special config in Dockerfile
 // .Mermaid

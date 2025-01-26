@@ -93,6 +93,14 @@ ifdef::backend-pdf[]
 toc::[]
 endif::[]
 
+include::book/figures.adoc[]
+
+include::book/tables.adoc[]
+
+include::book/symbols.adoc[]
+
+include::book/glossary.adoc[]
+
 ifdef::backend-html5[]
 :imagesdir: book/
 endif::[]
@@ -100,8 +108,6 @@ endif::[]
 include::book/chapters.adoc[]
 
 include::book/appendices.adoc[]
-
-include::book/glossary.adoc[]
 
 include::book/bibliography.adoc[]
 

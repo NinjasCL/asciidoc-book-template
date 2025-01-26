@@ -42,7 +42,7 @@ pdf p:
 	@rm -rf docs/book.pdf
 	@make files
 
-	@docker run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book asciidoctor-pdf -a allow-uri-read=true -a source-highlighter=rouge -a rouge-style=monokai_sublime -r asciidoctor-diagram -r asciidoctor-bibtex -r asciidoctor-mathematical -a mathematical-format=svg book.adoc -o docs/book.pdf --verbose
+	@docker run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book asciidoctor-pdf -a allow-uri-read=true -a source-highlighter=rouge -a rouge-style=monokai_sublime -r asciidoctor-lists -r asciidoctor-diagram -r asciidoctor-bibtex -r asciidoctor-mathematical -a mathematical-format=svg book.adoc -o docs/book.pdf --verbose --trace
 
 docbook d:
 	@rm -rf docs/book.xml

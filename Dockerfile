@@ -18,9 +18,6 @@ RUN apk add --no-cache \
     bash \
     imagemagick \
     ttf-dejavu
-
-# TODO: Consider installing bibtex for using: asciidoctor -r asciidoctor-bibtex
-
 # DBML
 # Since making ERD with PlantUML is cumbersome
 RUN npm install -g @dbml/cli
@@ -39,6 +36,9 @@ RUN npm install -g @softwaretechnik/dbml-renderer
 # Vega
 # For making charts and graphs
 RUN npm install --build-from-source -g vega-cli vega vega-lite vega-embed
+
+# Install Asciidoctor GEMs
+RUN gem install --no-document asciidoctor-lists:1.1.2
 
 WORKDIR /documents
 VOLUME /documents

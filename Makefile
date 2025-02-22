@@ -1,19 +1,21 @@
 .PHONY: html pdf server install bash word docbook docs files
+# COMMAND=docker
+COMMAND=podman
 
 # Enter the server inside Docker
 bash:
-	@docker run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book /bin/bash
+	@${COMMAND} run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book /bin/bash
 
 # Install Docker Image
 install i:
-	@docker build -t adoc-book .
+	@${COMMAND} build -t adoc-book .
 
 # HTML
 html h:
 	@rm -rf docs/html
 	@mkdir -p docs/html
 	@cp -r resources/ docs/html
-	@docker run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book asciidoctor -r asciidoctor-diagram book.adoc -o docs/html/index.html --verbose
+	@${COMMAND} run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book asciidoctor -r asciidoctor-diagram book.adoc -o docs/html/index.html --verbose
 
 # Preview HTML Output
 server s:
@@ -42,14 +44,14 @@ pdf p:
 	@rm -rf docs/book.pdf
 	@make files
 
-	@docker run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book asciidoctor-pdf -a allow-uri-read=true -a source-highlighter=rouge -a rouge-style=monokai_sublime -r asciidoctor-lists -r asciidoctor-diagram -r asciidoctor-bibtex -r asciidoctor-mathematical -a mathematical-format=svg book.adoc -o docs/book.pdf --verbose --trace
+	@${COMMAND} run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book asciidoctor-pdf -a allow-uri-read=true -a source-highlighter=rouge -a rouge-style=monokai_sublime -r asciidoctor-lists -r asciidoctor-diagram -r asciidoctor-bibtex -r asciidoctor-mathematical -a mathematical-format=svg book.adoc -o docs/book.pdf --verbose --trace
 
 docbook d:
 	@rm -rf docs/book.xml
 	@make files
-	@docker run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book asciidoctor -b docbook -r asciidoctor-diagram -r asciidoctor-bibtex -r asciidoctor-mathematical -a mathematical-format=svg -a media=prepress book.adoc -o docs/book.xml --verbose
+	@${COMMAND} run -it -u $(id -u):$(id -g) -v .:/documents/ adoc-book asciidoctor -b docbook -r asciidoctor-diagram -r asciidoctor-bibtex -r asciidoctor-mathematical -a mathematical-format=svg -a media=prepress book.adoc -o docs/book.xml --verbose
 
 word w:
 	@rm -rf docs/book.docx
 	@make docbook
-	@docker run -it -u $(id -u):$(id -g) -v ./docs:/pandoc dalibo/pandocker --from docbook --to docx --output book.docx book.xml
+	@${COMMAND} run -it -u $(id -u):$(id -g) -v ./docs:/pandoc docker.io/dalibo/pandocker --from docbook --to docx --output book.docx book.xml

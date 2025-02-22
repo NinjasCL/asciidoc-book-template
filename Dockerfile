@@ -1,6 +1,6 @@
 # See https://docs.asciidoctor.org/diagram-extension/latest/
 # Tested on asciidoctor/docker-asciidoctor:1.78
-FROM asciidoctor/docker-asciidoctor:latest
+FROM docker.io/asciidoctor/docker-asciidoctor:latest
 
 # Image comes with PlantUML and Grahpviz by default
 # Add renderers of additional diagram languages
